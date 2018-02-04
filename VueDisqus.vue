@@ -40,7 +40,9 @@
         this.reset(window.DISQUS)
         return
       }
-      this.init()
+      setTimeout(() => {
+        this.init()
+      }, 500)
     },
     methods: {
       reset (dsq) {
