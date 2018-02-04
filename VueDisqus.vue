@@ -1,5 +1,4 @@
 <template>
-import { debug } from 'util';
   <div id="disqus_thread"></div>
 </template>
 
@@ -41,9 +40,7 @@ import { debug } from 'util';
         this.reset(window.DISQUS)
         return
       }
-      setTimeout(() => {
-        this.init()
-      }, 500)
+      this.init()
     },
     methods: {
       reset (dsq) {
@@ -93,11 +90,9 @@ import { debug } from 'util';
           s.async = true
           s.setAttribute('id', 'embed-disqus')
           s.setAttribute('data-timestamp', +new Date())
-          s.src = `//${this.shortname}.disqus.com/embed.js`
-          ;
-          
+          s.src = `//${this.shortname}.disqus.com/embed.js`;
           console.log('vd', d, d.head, d.body);
-
+          
           (d.head || d.body).appendChild(s)
         }, 0)
       }
