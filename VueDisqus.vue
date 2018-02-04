@@ -94,7 +94,7 @@
           console.log('vd', d, d.head, d.body, document.getElementById('disqus_thread'));
           
           (d.head || d.body).appendChild(s)
-        }, 0)
+        }, 500)
       }
     }
   }
