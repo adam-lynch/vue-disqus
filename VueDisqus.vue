@@ -91,7 +91,7 @@
           s.setAttribute('id', 'embed-disqus')
           s.setAttribute('data-timestamp', +new Date())
           s.src = `//${this.shortname}.disqus.com/embed.js`;
-          console.log('vd', d, d.head, d.body);
+          console.log('vd', d, d.head, d.body, document.getElementById('disqus_thread'));
           
           (d.head || d.body).appendChild(s)
         }, 0)
