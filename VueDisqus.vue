@@ -1,4 +1,5 @@
 <template>
+import { debug } from 'util';
   <div id="disqus_thread"></div>
 </template>
 
@@ -93,7 +94,11 @@
           s.setAttribute('id', 'embed-disqus')
           s.setAttribute('data-timestamp', +new Date())
           s.src = `//${this.shortname}.disqus.com/embed.js`
-          ;(d.head || d.body).appendChild(s)
+          ;
+          
+          console.log('vd', d, d.head, d.body);
+
+          (d.head || d.body).appendChild(s)
         }, 0)
       }
     }
